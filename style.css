@@ -1,0 +1,214 @@
+/*
+  Estilos generales de la página.
+  Diseño responsive, limpio y moderno sin frameworks.
+*/
+
+:root {
+  --bg: #f7f9fc;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #1d4ed8;
+  --primary-hover: #1e40af;
+  --whatsapp: #25d366;
+  --whatsapp-hover: #1faa52;
+  --shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+img {
+  width: 100%;
+  display: block;
+  border-radius: var(--radius);
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+/* Cabecera */
+.site-header {
+  background: linear-gradient(120deg, #0f172a, #1e3a8a);
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: clamp(1.5rem, 2.8vw, 2.4rem);
+}
+
+.site-header p {
+  margin-top: 0.75rem;
+  color: #dbeafe;
+}
+
+/* Hero */
+.hero {
+  margin: 1.5rem auto 2rem;
+  width: min(1200px, 95%);
+}
+
+.hero img {
+  max-height: 520px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+section {
+  margin: 2.5rem auto;
+}
+
+h2 {
+  font-size: clamp(1.4rem, 2.3vw, 2rem);
+  margin-bottom: 1rem;
+}
+
+/* Tarjetas de características */
+.feature-grid,
+.review-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card,
+.review-card {
+  background: var(--surface);
+  padding: 1.1rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+/* Mapa */
+.map-wrapper {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 360px;
+  border: 0;
+}
+
+/* Galería */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.8rem;
+}
+
+.gallery-grid img {
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+/* Reseñas */
+.review-card {
+  margin: 0;
+  border-left: 4px solid #93c5fd;
+}
+
+.review-card cite {
+  display: block;
+  margin-top: 0.8rem;
+  color: var(--muted);
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* Botones */
+.actions {
+  text-align: center;
+}
+
+.button-group {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.8rem 1.3rem;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: var(--primary);
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn-whatsapp {
+  background: var(--whatsapp);
+}
+
+.btn-whatsapp:hover {
+  background: var(--whatsapp-hover);
+}
+
+/* Pie de página */
+.site-footer {
+  margin-top: 3rem;
+  background: #0b1220;
+  color: #cbd5e1;
+  padding: 1rem 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Ajustes específicos para móvil */
+@media (max-width: 600px) {
+  .site-header {
+    padding: 2.2rem 1rem;
+  }
+
+  .map-wrapper iframe {
+    height: 280px;
+  }
+}
