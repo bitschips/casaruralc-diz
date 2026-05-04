@@ -79,15 +79,14 @@ h2 {
 }
 
 /* Tarjetas de características */
-.feature-grid,
-.review-grid {
+.feature-grid {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .card,
-.review-card {
+.blog-card {
   background: var(--surface);
   padding: 1.1rem;
   border-radius: var(--radius);
@@ -123,18 +122,35 @@ h2 {
   object-fit: cover;
 }
 
-/* Reseñas */
-.review-card {
-  margin: 0;
-  border-left: 4px solid #93c5fd;
+/* Blog de lugares */
+.blog-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-.review-card cite {
-  display: block;
-  margin-top: 0.8rem;
-  color: var(--muted);
-  font-style: normal;
+.blog-card img {
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  margin-bottom: 0.7rem;
+}
+
+.blog-card h3 {
+  margin: 0.2rem 0 0.5rem;
+}
+
+.blog-card p {
+  margin: 0 0 0.8rem;
+}
+
+.blog-card a {
+  color: var(--primary);
   font-weight: 600;
+  text-decoration: none;
+}
+
+.blog-card a:hover {
+  text-decoration: underline;
 }
 
 /* Botones */
