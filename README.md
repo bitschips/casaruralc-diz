@@ -1,0 +1,1 @@
+# casaruralc-diz
